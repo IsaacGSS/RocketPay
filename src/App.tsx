@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export const Card = () => {
   return (
-    <div className="App">
+    <main className='bg-black text-white h-screen flex justify-center items-center gap-16'>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <form action=''>
+          <div>
+            <label htmlFor=''>NÚMERO DO CARTÃO</label>
+            <input type='text' name='NÚMERO DO CARTÃO' required />
+          </div>
+
+          <div>
+            <label htmlFor=''>NOME DO TITULAR</label>
+            <input type='text' name='NOME DO TITULAR' required />
+          </div>
+
+          <div>
+            <label htmlFor=''>EXPIRAÇÃO</label>
+            <input type='text' name='EXPIRAÇÃO' required />
+          </div>
+
+          <div>
+            <label htmlFor=''>CVC</label>
+            <input type='text' name='CVC' required />
+          </div>
+          <button type='submit'>ADICIONAR CARTAO</button>
+        </form>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+
+      <div className='w-[360px] h-[230px] bg-zinc-100 bg-opacity-75 border border-white rounded-md'></div>
+    </main>
   )
 }
-
-export default App
